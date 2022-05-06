@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "128184667945",
+    "project_id": "ebook-app-1d3d9",
+    "storage_bucket": "ebook-app-1d3d9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:128184667945:android:1369c61811fd40ab5af138",
+        "android_client_info": {
+          "package_name": "com.ray.untan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "128184667945-scvuj7oiucgsp3ov5b96v3nkhc42qsq3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ray.untan",
+            "certificate_hash": "de5247eadc182613cf8a39d943b7f7fc8298eb3d"
+          }
+        },
+        {
+          "client_id": "128184667945-aagbh0fp3fj0rquqc3s7ulpkn0b6pjf2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjqnKYD8cBsHY4YDHKxpqKWTo6069wf2s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "128184667945-aagbh0fp3fj0rquqc3s7ulpkn0b6pjf2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
