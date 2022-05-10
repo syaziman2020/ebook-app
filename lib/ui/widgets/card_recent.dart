@@ -32,7 +32,7 @@ class CardRecent extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  margin: EdgeInsets.only(right: 6),
+                  margin: const EdgeInsets.only(right: 6),
                   width: 90,
                   height: 120,
                   decoration: BoxDecoration(

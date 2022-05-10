@@ -31,7 +31,7 @@ class MainPage extends StatelessWidget {
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 image: DecorationImage(
-                  image: AssetImage("assets/profile.png"),
+                  image: AssetImage("assets/no-profile.png"),
                 ),
               ),
             ),
@@ -153,12 +153,7 @@ class MainPage extends StatelessWidget {
           child: Row(
             children: [
               GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(
-                    context,
-                    '/detail',
-                  );
-                },
+                onTap: () {},
                 child: const CardRecent(
                   title: "The Magic",
                   imageUrl: "assets/magic.png",
@@ -245,7 +240,7 @@ class MainPage extends StatelessWidget {
 
     Widget content() {
       return ListView(
-        padding: EdgeInsets.fromLTRB(0, 35, 0, 0),
+        padding: const EdgeInsets.fromLTRB(0, 35, 0, 0),
         physics: const BouncingScrollPhysics(),
         children: [
           Container(
@@ -302,7 +297,7 @@ class MainPage extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: creamC,
-      bottomNavigationBar: BottomNavbar(),
+      bottomNavigationBar: const BottomNavbar(),
       body: BlocBuilder<CurrentPageCubit, int>(
         builder: (context, state) {
           return buildContent(state);

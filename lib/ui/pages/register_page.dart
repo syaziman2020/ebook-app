@@ -71,7 +71,7 @@ class RegisterPage extends StatelessWidget {
             height: 15,
           ),
           BlocConsumer<AuthCubit, AuthState>(
-            listener: (context, state) {
+            listener: (_, state) {
               if (state is AuthSuccess) {
                 Navigator.pushNamedAndRemoveUntil(
                   context,
@@ -79,6 +79,7 @@ class RegisterPage extends StatelessWidget {
                   (route) => false,
                 );
               } else if (state is AuthFailed) {
+                print(state.error);
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                     backgroundColor: greenC,
@@ -96,7 +97,7 @@ class RegisterPage extends StatelessWidget {
               return CustomButton(
                 text: "Register Now",
                 onPressed: () {
-                  context.read<AuthCubit>().signUp(
+                  context.read<AuthCubit>().register(
                         email: emailController.text,
                         password: passController.text,
                         name: nameController.text,

@@ -72,7 +72,8 @@ class LoginPage extends StatelessWidget {
             height: 20,
           ),
           BlocConsumer<AuthCubit, AuthState>(
-            listener: (context, state) {
+            listener: (_, state) {
+              print(state);
               if (state is AuthSuccess) {
                 Navigator.pushNamedAndRemoveUntil(
                   context,
@@ -97,7 +98,7 @@ class LoginPage extends StatelessWidget {
               return CustomButton(
                 text: "Login",
                 onPressed: () {
-                  context.read<AuthCubit>().signIn(
+                  context.read<AuthCubit>().logIn(
                         email: emailController.text,
                         password: passController.text,
                       );

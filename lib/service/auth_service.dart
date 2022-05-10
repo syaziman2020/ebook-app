@@ -20,7 +20,15 @@ class AuthService {
       );
       return user;
     } catch (e) {
-      rethrow;
+      if (email.isEmpty || password.isEmpty) {
+        throw ('Please enter email and password');
+      } else if (e.toString().contains('user-not-found')) {
+        throw ('User not found');
+      } else if (e.toString().contains('wrong-password')) {
+        throw ('Wrong password');
+      } else {
+        rethrow;
+      }
     }
   }
 
@@ -44,7 +52,17 @@ class AuthService {
       await UserService().setUser(user);
       return user;
     } catch (e) {
-      rethrow;
+      if (email.isEmpty || password.isEmpty || name.isEmpty) {
+        throw ('Please fill in all data');
+      } else if (e.toString().contains('email-already-in-use')) {
+        throw ('Sorry, this email already in use');
+      } else if (e.toString().contains('invalid-email')) {
+        throw ('Please fill in the email correctly');
+      } else if (e.toString().contains('weak-password')) {
+        throw ('Password should be at least 6 characters');
+      } else {
+        rethrow;
+      }
     }
   }
 
